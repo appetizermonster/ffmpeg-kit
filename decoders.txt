@@ -1,0 +1,140 @@
+ V....D bintext              Binary text
+ V....D bmp                  BMP (Windows and OS/2 bitmap)
+ VFS..D jpeg2000             JPEG 2000
+ VF...D libopenjpeg          OpenJPEG JPEG 2000 (codec jpeg2000)
+ V....D jpegls               JPEG-LS
+ VF...D png                  PNG (Portable Network Graphics) image
+ VF...D tiff                 TIFF image
+ VF...D webp                 WebP image
+ VF...D zlib                 LCL (LossLess Codec Library) ZLIB
+ A....D aac                  AAC (Advanced Audio Coding)
+ A....D aac_fixed            AAC (Advanced Audio Coding) (codec aac)
+ A....D aac_at               aac (AudioToolbox) (codec aac)
+ A....D aac_latm             AAC LATM (Advanced Audio Coding LATM syntax)
+ A....D adpcm_4xm            ADPCM 4X Movie
+ A....D adpcm_adx            SEGA CRI ADX ADPCM
+ A....D adpcm_afc            ADPCM Nintendo Gamecube AFC
+ A....D adpcm_agm            ADPCM AmuseGraphics Movie
+ A....D adpcm_aica           ADPCM Yamaha AICA
+ A....D adpcm_argo           ADPCM Argonaut Games
+ A....D adpcm_ct             ADPCM Creative Technology
+ A....D adpcm_dtk            ADPCM Nintendo Gamecube DTK
+ A....D adpcm_ea             ADPCM Electronic Arts
+ A....D adpcm_ea_maxis_xa    ADPCM Electronic Arts Maxis CDROM XA
+ A....D adpcm_ea_r1          ADPCM Electronic Arts R1
+ A....D adpcm_ea_r2          ADPCM Electronic Arts R2
+ A....D adpcm_ea_r3          ADPCM Electronic Arts R3
+ A....D adpcm_ea_xas         ADPCM Electronic Arts XAS
+ A....D g722                 G.722 ADPCM (codec adpcm_g722)
+ A....D g726                 G.726 ADPCM (codec adpcm_g726)
+ A....D g726le               G.726 ADPCM little-endian (codec adpcm_g726le)
+ A....D adpcm_ima_alp        ADPCM IMA High Voltage Software ALP
+ A....D adpcm_ima_amv        ADPCM IMA AMV
+ A....D adpcm_ima_apc        ADPCM IMA CRYO APC
+ A....D adpcm_ima_apm        ADPCM IMA Ubisoft APM
+ A....D adpcm_ima_cunning    ADPCM IMA Cunning Developments
+ A....D adpcm_ima_dat4       ADPCM IMA Eurocom DAT4
+ A....D adpcm_ima_dk3        ADPCM IMA Duck DK3
+ A....D adpcm_ima_dk4        ADPCM IMA Duck DK4
+ A....D adpcm_ima_ea_eacs    ADPCM IMA Electronic Arts EACS
+ A....D adpcm_ima_ea_sead    ADPCM IMA Electronic Arts SEAD
+ A....D adpcm_ima_iss        ADPCM IMA Funcom ISS
+ A....D adpcm_ima_moflex     ADPCM IMA MobiClip MOFLEX
+ A....D adpcm_ima_mtf        ADPCM IMA Capcom's MT Framework
+ A....D adpcm_ima_oki        ADPCM IMA Dialogic OKI
+ A....D adpcm_ima_qt         ADPCM IMA QuickTime
+ A....D adpcm_ima_qt_at      adpcm_ima_qt (AudioToolbox) (codec adpcm_ima_qt)
+ A....D adpcm_ima_rad        ADPCM IMA Radical
+ A....D adpcm_ima_smjpeg     ADPCM IMA Loki SDL MJPEG
+ A....D adpcm_ima_ssi        ADPCM IMA Simon & Schuster Interactive
+ A....D adpcm_ima_wav        ADPCM IMA WAV
+ A....D adpcm_ima_ws         ADPCM IMA Westwood
+ A....D adpcm_ms             ADPCM Microsoft
+ A....D adpcm_mtaf           ADPCM MTAF
+ A....D adpcm_psx            ADPCM Playstation
+ A....D adpcm_sbpro_2        ADPCM Sound Blaster Pro 2-bit
+ A....D adpcm_sbpro_3        ADPCM Sound Blaster Pro 2.6-bit
+ A....D adpcm_sbpro_4        ADPCM Sound Blaster Pro 4-bit
+ A....D adpcm_swf            ADPCM Shockwave Flash
+ A....D adpcm_thp            ADPCM Nintendo THP
+ A....D adpcm_thp_le         ADPCM Nintendo THP (little-endian)
+ A....D adpcm_vima           LucasArts VIMA audio
+ A....D adpcm_xa             ADPCM CDROM XA
+ A....D adpcm_yamaha         ADPCM Yamaha
+ A....D adpcm_zork           ADPCM Zork
+ AF...D alac                 ALAC (Apple Lossless Audio Codec)
+ A....D alac_at              alac (AudioToolbox) (codec alac)
+ A....D amrnb                AMR-NB (Adaptive Multi-Rate NarrowBand) (codec amr_nb)
+ A....D amr_nb_at            amr_nb (AudioToolbox) (codec amr_nb)
+ A....D libopencore_amrnb    OpenCORE AMR-NB (Adaptive Multi-Rate Narrow-Band) (codec amr_nb)
+ A....D amrwb                AMR-WB (Adaptive Multi-Rate WideBand) (codec amr_wb)
+ A....D libopencore_amrwb    OpenCORE AMR-WB (Adaptive Multi-Rate Wide-Band) (codec amr_wb)
+ A....D ape                  Monkey's Audio
+ AF...D flac                 FLAC (Free Lossless Audio Codec)
+ A....D gremlin_dpcm         DPCM Gremlin
+ A....D gsm                  GSM
+ A....D gsm_ms               GSM Microsoft variant
+ A....D gsm_ms_at            gsm_ms (AudioToolbox) (codec gsm_ms)
+ A....D mp1                  MP1 (MPEG audio layer 1)
+ A....D mp1float             MP1 (MPEG audio layer 1) (codec mp1)
+ A....D mp1_at               mp1 (AudioToolbox) (codec mp1)
+ A....D mp2                  MP2 (MPEG audio layer 2)
+ A....D mp2float             MP2 (MPEG audio layer 2) (codec mp2)
+ A....D mp2_at               mp2 (AudioToolbox) (codec mp2)
+ A....D mp3float             MP3 (MPEG audio layer 3) (codec mp3)
+ A....D mp3                  MP3 (MPEG audio layer 3)
+ A....D mp3_at               mp3 (AudioToolbox) (codec mp3)
+ A....D mp3adufloat          ADU (Application Data Unit) MP3 (MPEG audio layer 3) (codec mp3adu)
+ A....D mp3adu               ADU (Application Data Unit) MP3 (MPEG audio layer 3)
+ A....D mp3on4float          MP3onMP4 (codec mp3on4)
+ A....D mp3on4               MP3onMP4
+ A....D als                  MPEG-4 Audio Lossless Coding (ALS) (codec mp4als)
+ A....D opus                 Opus
+ A....D libopus              libopus Opus (codec opus)
+ A....D pcm_alaw             PCM A-law / G.711 A-law
+ A....D pcm_alaw_at          pcm_alaw (AudioToolbox) (codec pcm_alaw)
+ A....D pcm_bluray           PCM signed 16|20|24-bit big-endian for Blu-ray media
+ A....D pcm_dvd              PCM signed 16|20|24-bit big-endian for DVD media
+ A....D pcm_f16le            PCM 16.8 floating point little-endian
+ A....D pcm_f24le            PCM 24.0 floating point little-endian
+ A....D pcm_f32be            PCM 32-bit floating point big-endian
+ A....D pcm_f32le            PCM 32-bit floating point little-endian
+ A....D pcm_f64be            PCM 64-bit floating point big-endian
+ A....D pcm_f64le            PCM 64-bit floating point little-endian
+ A....D pcm_lxf              PCM signed 20-bit little-endian planar
+ A....D pcm_mulaw            PCM mu-law / G.711 mu-law
+ A....D pcm_mulaw_at         pcm_mulaw (AudioToolbox) (codec pcm_mulaw)
+ A....D pcm_s16be            PCM signed 16-bit big-endian
+ A....D pcm_s16be_planar     PCM signed 16-bit big-endian planar
+ A....D pcm_s16le            PCM signed 16-bit little-endian
+ A....D pcm_s16le_planar     PCM signed 16-bit little-endian planar
+ A....D pcm_s24be            PCM signed 24-bit big-endian
+ A....D pcm_s24daud          PCM D-Cinema audio signed 24-bit
+ A....D pcm_s24le            PCM signed 24-bit little-endian
+ A....D pcm_s24le_planar     PCM signed 24-bit little-endian planar
+ A....D pcm_s32be            PCM signed 32-bit big-endian
+ A....D pcm_s32le            PCM signed 32-bit little-endian
+ A....D pcm_s32le_planar     PCM signed 32-bit little-endian planar
+ A....D pcm_s64be            PCM signed 64-bit big-endian
+ A....D pcm_s64le            PCM signed 64-bit little-endian
+ A....D pcm_s8               PCM signed 8-bit
+ A....D pcm_s8_planar        PCM signed 8-bit planar
+ A....D pcm_sga              PCM SGA
+ A....D pcm_u16be            PCM unsigned 16-bit big-endian
+ A....D pcm_u16le            PCM unsigned 16-bit little-endian
+ A....D pcm_u24be            PCM unsigned 24-bit big-endian
+ A....D pcm_u24le            PCM unsigned 24-bit little-endian
+ A....D pcm_u32be            PCM unsigned 32-bit big-endian
+ A....D pcm_u32le            PCM unsigned 32-bit little-endian
+ A....D pcm_u8               PCM unsigned 8-bit
+ A....D pcm_vidc             PCM Archimedes VIDC
+ A....D libspeex             libspeex Speex (codec speex)
+ A....D vorbis               Vorbis
+ A..... libvorbis            libvorbis (codec vorbis)
+ AFS..D wavpack              WavPack
+ A....D ws_snd1              Westwood Audio (SND1) (codec westwood_snd1)
+ A....D wmalossless          Windows Media Audio Lossless
+ A....D wmapro               Windows Media Audio 9 Professional
+ A....D wmav1                Windows Media Audio 1
+ A....D wmav2                Windows Media Audio 2
+ A....D wmavoice             Windows Media Audio Voice

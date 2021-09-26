@@ -1,0 +1,63 @@
+ V..... bmp                  BMP (Windows and OS/2 bitmap)
+ V..... gif                  GIF (Graphics Interchange Format)
+ V..... jpeg2000             JPEG 2000
+ VF.... libopenjpeg          OpenJPEG JPEG 2000 (codec jpeg2000)
+ VF.... jpegls               JPEG-LS
+ VF.... ljpeg                Lossless JPEG
+ VF.... png                  PNG (Portable Network Graphics) image
+ VF.... tiff                 TIFF image
+ VF.... zlib                 LCL (LossLess Codec Library) ZLIB
+ A..... aac                  AAC (Advanced Audio Coding)
+ A....D aac_at               aac (AudioToolbox) (codec aac)
+ A..... adpcm_adx            SEGA CRI ADX ADPCM
+ A..... adpcm_argo           ADPCM Argonaut Games
+ A..... g722                 G.722 ADPCM (codec adpcm_g722)
+ A..... g726                 G.726 ADPCM (codec adpcm_g726)
+ A..... g726le               G.726 little endian ADPCM ("right-justified") (codec adpcm_g726le)
+ A..... adpcm_ima_alp        ADPCM IMA High Voltage Software ALP
+ A..... adpcm_ima_amv        ADPCM IMA AMV
+ A..... adpcm_ima_apm        ADPCM IMA Ubisoft APM
+ A..... adpcm_ima_qt         ADPCM IMA QuickTime
+ A..... adpcm_ima_ssi        ADPCM IMA Simon & Schuster Interactive
+ A..... adpcm_ima_wav        ADPCM IMA WAV
+ A..... adpcm_ms             ADPCM Microsoft
+ A..... adpcm_swf            ADPCM Shockwave Flash
+ A..... adpcm_yamaha         ADPCM Yamaha
+ A..... flac                 FLAC (Free Lossless Audio Codec)
+ A..... libmp3lame           libmp3lame MP3 (MPEG audio layer 3) (codec mp3)
+ A..X.. opus                 Opus
+ A..... libopus              libopus Opus (codec opus)
+ A..... pcm_alaw             PCM A-law / G.711 A-law
+ A....D pcm_alaw_at          pcm_alaw (AudioToolbox) (codec pcm_alaw)
+ A..... pcm_dvd              PCM signed 16|20|24-bit big-endian for DVD media
+ A..... pcm_f32be            PCM 32-bit floating point big-endian
+ A..... pcm_f32le            PCM 32-bit floating point little-endian
+ A..... pcm_f64be            PCM 64-bit floating point big-endian
+ A..... pcm_f64le            PCM 64-bit floating point little-endian
+ A..... pcm_mulaw            PCM mu-law / G.711 mu-law
+ A....D pcm_mulaw_at         pcm_mulaw (AudioToolbox) (codec pcm_mulaw)
+ A..... pcm_s16be            PCM signed 16-bit big-endian
+ A..... pcm_s16be_planar     PCM signed 16-bit big-endian planar
+ A..... pcm_s16le            PCM signed 16-bit little-endian
+ A..... pcm_s16le_planar     PCM signed 16-bit little-endian planar
+ A..... pcm_s24be            PCM signed 24-bit big-endian
+ A..... pcm_s24daud          PCM D-Cinema audio signed 24-bit
+ A..... pcm_s24le            PCM signed 24-bit little-endian
+ A..... pcm_s24le_planar     PCM signed 24-bit little-endian planar
+ A..... pcm_s32be            PCM signed 32-bit big-endian
+ A..... pcm_s32le            PCM signed 32-bit little-endian
+ A..... pcm_s32le_planar     PCM signed 32-bit little-endian planar
+ A..... pcm_s64be            PCM signed 64-bit big-endian
+ A..... pcm_s64le            PCM signed 64-bit little-endian
+ A..... pcm_s8               PCM signed 8-bit
+ A..... pcm_s8_planar        PCM signed 8-bit planar
+ A..... pcm_u16be            PCM unsigned 16-bit big-endian
+ A..... pcm_u16le            PCM unsigned 16-bit little-endian
+ A..... pcm_u24be            PCM unsigned 24-bit big-endian
+ A..... pcm_u24le            PCM unsigned 24-bit little-endian
+ A..... pcm_u32be            PCM unsigned 32-bit big-endian
+ A..... pcm_u32le            PCM unsigned 32-bit little-endian
+ A..... pcm_u8               PCM unsigned 8-bit
+ A..... pcm_vidc             PCM Archimedes VIDC
+ A..X.. vorbis               Vorbis
+ A..... libvorbis            libvorbis (codec vorbis)

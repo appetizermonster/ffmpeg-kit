@@ -1,0 +1,37 @@
+  E f32be           PCM 32-bit floating-point big-endian
+  E f32le           PCM 32-bit floating-point little-endian
+  E f64be           PCM 64-bit floating-point big-endian
+  E f64le           PCM 64-bit floating-point little-endian
+  E ffmetadata      FFmpeg metadata in text
+  E flac            raw FLAC
+  E m4v             raw MPEG-4 video
+  E matroska        Matroska
+  E mp3             MP3 (MPEG audio layer 3)
+  E mp4             MP4 (MPEG-4 Part 14)
+  E mpeg            MPEG-1 Systems / MPEG program stream
+  E mpjpeg          MIME multipart JPEG
+  E mulaw           PCM mu-law
+  E null            raw null video
+  E oga             Ogg Audio
+  E ogg             Ogg
+  E ogv             Ogg Video
+  E opus            Ogg Opus
+  E s16be           PCM signed 16-bit big-endian
+  E s16le           PCM signed 16-bit little-endian
+  E s24be           PCM signed 24-bit big-endian
+  E s24le           PCM signed 24-bit little-endian
+  E s32be           PCM signed 32-bit big-endian
+  E s32le           PCM signed 32-bit little-endian
+  E s8              PCM signed 8-bit
+  E singlejpeg      JPEG single image
+  E spx             Ogg Speex
+  E tee             Multiple muxer tee
+  E u16be           PCM unsigned 16-bit big-endian
+  E u16le           PCM unsigned 16-bit little-endian
+  E u24be           PCM unsigned 24-bit big-endian
+  E u24le           PCM unsigned 24-bit little-endian
+  E u32be           PCM unsigned 32-bit big-endian
+  E u32le           PCM unsigned 32-bit little-endian
+  E u8              PCM unsigned 8-bit
+  E wav             WAV / WAVE (Waveform Audio)
+  E webp            WebP

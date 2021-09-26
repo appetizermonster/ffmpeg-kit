@@ -1,0 +1,47 @@
+ D  aac             raw ADTS AAC (Advanced Audio Coding)
+ D  aiff            Audio IFF
+ D  alaw            PCM A-law
+ D  amr             3GPP AMR
+ D  amrnb           raw AMR-NB
+ D  amrwb           raw AMR-WB
+ D  ape             Monkey's Audio
+ D  asf             ASF (Advanced / Active Streaming Format)
+ D  asf_o           ASF (Advanced / Active Streaming Format)
+ D  ast             AST (Audio Stream)
+ D  bin             Binary text
+ D  data            raw data
+ D  f32be           PCM 32-bit floating-point big-endian
+ D  f32le           PCM 32-bit floating-point little-endian
+ D  f64be           PCM 64-bit floating-point big-endian
+ D  f64le           PCM 64-bit floating-point little-endian
+ D  ffmetadata      FFmpeg metadata in text
+ D  flac            raw FLAC
+ D  m4v             raw MPEG-4 video
+ D  matroska,webm   Matroska / WebM
+ D  mlv             Magic Lantern Video (MLV)
+ D  mov,mp4,m4a,3gp,3g2,mj2 QuickTime / MOV
+ D  mp3             MP2/3 (MPEG audio layer 2/3)
+ D  mpc             Musepack
+ D  mpc8            Musepack SV8
+ D  mpeg            MPEG-PS (MPEG-2 Program Stream)
+ D  mpegts          MPEG-TS (MPEG-2 Transport Stream)
+ D  mpegtsraw       raw MPEG-TS (MPEG-2 Transport Stream)
+ D  mpegvideo       raw MPEG video
+ D  ogg             Ogg
+ D  s16be           PCM signed 16-bit big-endian
+ D  s16le           PCM signed 16-bit little-endian
+ D  s24be           PCM signed 24-bit big-endian
+ D  s24le           PCM signed 24-bit little-endian
+ D  s32be           PCM signed 32-bit big-endian
+ D  s32le           PCM signed 32-bit little-endian
+ D  s337m           SMPTE 337M
+ D  s8              PCM signed 8-bit
+ D  u16be           PCM unsigned 16-bit big-endian
+ D  u16le           PCM unsigned 16-bit little-endian
+ D  u24be           PCM unsigned 24-bit big-endian
+ D  u24le           PCM unsigned 24-bit little-endian
+ D  u32be           PCM unsigned 32-bit big-endian
+ D  u32le           PCM unsigned 32-bit little-endian
+ D  u8              PCM unsigned 8-bit
+ D  wav             WAV / WAVE (Waveform Audio)
+ D  xwma            Microsoft xWMA
