@@ -58,8 +58,8 @@ enable_main_build() {
 enable_lts_build() {
   export FFMPEG_KIT_LTS_BUILD="1"
 
-  # LTS RELEASES USE API LEVEL 16 / Android 4.1 (JELLY BEAN)
-  export API=16
+  # LTS RELEASES USE API LEVEL 21 / Android 5.0 (LOLLIPOP) - minimum for newer NDK versions
+  export API=21
 }
 
 build_application_mk() {
@@ -109,6 +109,17 @@ get_clang_host() {
   esac
 }
 
+is_darwin_arm64() {
+  HOST_OS=$(uname -s)
+  HOST_ARCH=$(uname -m)
+
+  if [ "${HOST_OS}" == "Darwin" ] && [ "${HOST_ARCH}" == "arm64" ]; then
+    echo "1"
+  else
+    echo "0"
+  fi
+}
+
 get_toolchain() {
   HOST_OS=$(uname -s)
   case ${HOST_OS} in
@@ -123,6 +134,12 @@ get_toolchain() {
   i?86) HOST_ARCH=x86 ;;
   x86_64 | amd64) HOST_ARCH=x86_64 ;;
   esac
+
+  if [ "$(is_darwin_arm64)" == "1" ]; then
+    # NDK DOESNT HAVE AN ARM64 TOOLCHAIN ON DARWIN
+    # WE USE x86-64 WITH ROSETTA INSTEAD
+    HOST_ARCH=x86_64
+  fi
 
   echo "${HOST_OS}-${HOST_ARCH}"
 }
@@ -207,7 +224,7 @@ get_common_cflags() {
     local LTS_BUILD__FLAG="-DFFMPEG_KIT_LTS "
   fi
 
-  echo "-fno-integrated-as -fstrict-aliasing -DANDROID_NDK -fPIC -DANDROID ${LTS_BUILD__FLAG}-D__ANDROID__ -D__ANDROID_API__=${API}"
+  echo "-fstrict-aliasing -DANDROID_NDK -fPIC -DANDROID ${LTS_BUILD__FLAG}-D__ANDROID__ -D__ANDROID_API__=${API}"
 }
 
 get_arch_specific_cflags() {
@@ -222,10 +239,10 @@ get_arch_specific_cflags() {
     echo "-march=armv8-a -DFFMPEG_KIT_ARM64_V8A"
     ;;
   x86)
-    echo "-march=i686 -mtune=intel -mssse3 -mfpmath=sse -m32 -DFFMPEG_KIT_X86"
+    echo "-march=i686 -mtune=generic -mssse3 -mfpmath=sse -m32 -DFFMPEG_KIT_X86"
     ;;
   x86-64)
-    echo "-march=x86-64 -msse4.2 -mpopcnt -m64 -mtune=intel -DFFMPEG_KIT_X86_64"
+    echo "-march=x86-64 -msse4.2 -mpopcnt -m64 -mtune=generic -DFFMPEG_KIT_X86_64"
     ;;
   esac
 }
@@ -252,7 +269,7 @@ get_size_optimization_cflags() {
   arm64-v8a)
     case $1 in
     ffmpeg)
-      ARCH_OPTIMIZATION="${LINK_TIME_OPTIMIZATION_FLAGS} -fuse-ld=gold -O2 -ffunction-sections -fdata-sections"
+      ARCH_OPTIMIZATION="${LINK_TIME_OPTIMIZATION_FLAGS} -fuse-ld=lld -O2 -ffunction-sections -fdata-sections"
       ;;
     *)
       ARCH_OPTIMIZATION="-Os -ffunction-sections -fdata-sections"
@@ -395,7 +412,7 @@ get_size_optimization_ldflags() {
   arm64-v8a)
     case $1 in
     ffmpeg)
-      echo "-Wl,--gc-sections ${LINK_TIME_OPTIMIZATION_FLAGS} -fuse-ld=gold -O2 -ffunction-sections -fdata-sections -finline-functions"
+      echo "-Wl,--gc-sections ${LINK_TIME_OPTIMIZATION_FLAGS} -fuse-ld=lld -O2 -ffunction-sections -fdata-sections -finline-functions"
       ;;
     *)
       echo "-Wl,--gc-sections -Os -ffunction-sections -fdata-sections"
@@ -955,15 +972,8 @@ set_toolchain_paths() {
 
   HOST=$(get_host)
 
-  export AR=${HOST}-ar
   export CC=$(get_clang_host)-clang
   export CXX=$(get_clang_host)-clang++
-
-  if [ "$1" == "x264" ]; then
-    export AS=${CC}
-  else
-    export AS=${HOST}-as
-  fi
 
   case ${ARCH} in
   arm64-v8a)
@@ -972,9 +982,10 @@ set_toolchain_paths() {
   esac
 
   export LD=${HOST}-ld
-  export RANLIB=${HOST}-ranlib
-  export STRIP=${HOST}-strip
-  export NM=${HOST}-nm
+  export AR=llvm-ar
+  export RANLIB=llvm-ranlib
+  export STRIP=llvm-strip
+  export NM=llvm-nm
 
   export INSTALL_PKG_CONFIG_DIR="${BASEDIR}"/prebuilt/$(get_build_directory)/pkgconfig
   export ZLIB_PACKAGE_CONFIG_PATH="${INSTALL_PKG_CONFIG_DIR}/zlib.pc"
@@ -1009,5 +1020,5 @@ build_android_lts_support() {
 
   # BUILD
   "$(get_clang_host)"-clang ${CFLAGS} -Wno-unused-command-line-argument -c "${BASEDIR}"/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.c -o "${BASEDIR}"/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.o ${LDFLAGS} 1>>"${BASEDIR}"/build.log 2>&1
-  "${HOST}"-ar rcs "${BASEDIR}"/android/ffmpeg-kit-android-lib/src/main/cpp/libandroidltssupport.a "${BASEDIR}"/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.o 1>>"${BASEDIR}"/build.log 2>&1
+  ${AR} rcs "${BASEDIR}"/android/ffmpeg-kit-android-lib/src/main/cpp/libandroidltssupport.a "${BASEDIR}"/android/ffmpeg-kit-android-lib/src/main/cpp/android_lts_support.o 1>>"${BASEDIR}"/build.log 2>&1
 }

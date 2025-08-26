@@ -1,11 +1,12 @@
 apply plugin: 'com.android.library'
 
 android {
+    namespace 'com.arthenica.ffmpegkit'
     compileSdkVersion 30
-    ndkVersion "22.0.7026061"
+    ndkVersion "28.1.13356709"
 
     defaultConfig {
-        minSdkVersion 16
+        minSdkVersion 21
         targetSdkVersion 30
         versionCode 160440
         versionName "4.4.LTS"
@@ -18,6 +19,11 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
     }
 
     sourceSets {

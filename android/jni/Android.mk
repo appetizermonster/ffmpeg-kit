@@ -31,13 +31,13 @@ endif
 FFMPEG_INCLUDES := $(MY_LOCAL_PATH)/../../prebuilt/$(MY_BUILD_DIR)/ffmpeg/include
 
 MY_ARM_MODE := arm
-MY_ARM_NEON := false
+MY_ARM_NEON := true
 LOCAL_PATH := $(MY_LOCAL_PATH)/../ffmpeg-kit-android-lib/src/main/cpp
 
 # DEFINE ARCH FLAGS
 ifeq ($(TARGET_ARCH_ABI), armeabi-v7a)
     MY_ARCH_FLAGS := ARM_V7A
-    MY_ARM_NEON := false
+    MY_ARM_NEON := true
 endif
 ifeq ($(TARGET_ARCH_ABI), arm64-v8a)
     MY_ARCH_FLAGS := ARM64_V8A
@@ -45,9 +45,11 @@ ifeq ($(TARGET_ARCH_ABI), arm64-v8a)
 endif
 ifeq ($(TARGET_ARCH_ABI), x86)
     MY_ARCH_FLAGS := X86
+    MY_ARM_NEON := true
 endif
 ifeq ($(TARGET_ARCH_ABI), x86_64)
     MY_ARCH_FLAGS := X86_64
+    MY_ARM_NEON := true
 endif
 
 include $(CLEAR_VARS)
