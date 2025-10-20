@@ -31,14 +31,14 @@ endif
 FFMPEG_INCLUDES := $(MY_LOCAL_PATH)/../../prebuilt/$(MY_BUILD_DIR)/ffmpeg/include
 
 MY_ARM_MODE := arm
-MY_ARM_NEON := false
+MY_ARM_NEON := true
 LOCAL_PATH := $(MY_LOCAL_PATH)/../ffmpeg-kit-android-lib/src/main/cpp
 
 # DEFINE ARCH FLAGS
 ifeq ($(TARGET_ARCH_ABI), armeabi-v7a)
     MY_ARCH_FLAGS := ARM_V7A
     ifeq ("$(shell test -e $(MY_LOCAL_PATH)/../build/.lts && echo lts)","lts")
-        MY_ARM_NEON := false
+        MY_ARM_NEON := true
     else
         MY_ARM_NEON := true
     endif
